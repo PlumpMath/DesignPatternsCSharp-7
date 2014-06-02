@@ -23,5 +23,10 @@ namespace DesignPatterns.Shapes
 
 		public double Radius
 		{ get; set; }
+
+		public override double CalcArea()
+		{
+			return this.Radius * this.Radius * Math.PI;
+		}
 	}
 }
