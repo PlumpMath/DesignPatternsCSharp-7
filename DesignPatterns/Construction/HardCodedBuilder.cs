@@ -9,16 +9,16 @@ namespace DesignPatterns.Construction
 {
 	public class HardCodedBuilder : AbstractBuilder
 	{
-		public override Shape Construct()
+		public override Shape Construct(ShapeFactory shapeFactory)
 		{
-			var rootShape = new CompositeShape();
+			var rootShape = shapeFactory.CreateComposite();
 
-			rootShape.Add(new Rectangle(10, 30, 5, 4));
-			rootShape.Add(new Circle(10, 3, 13));
+			rootShape.Add(shapeFactory.CreateRectangle(10, 30, 5, 4));
+			rootShape.Add(shapeFactory.CreateCircle(10, 3, 13));
 
-			rootShape.Add(new CompositeShape(
-					new Rectangle(12, 14, 2, 2),
-					new Circle(15, 18, 2)
+			rootShape.Add(shapeFactory.CreateComposite(
+					shapeFactory.CreateRectangle(12, 14, 2, 2),
+					shapeFactory.CreateCircle(15, 18, 2)
 				));
 
 			return rootShape;

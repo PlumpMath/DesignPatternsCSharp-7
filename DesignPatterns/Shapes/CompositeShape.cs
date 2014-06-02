@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Shapes
 {
-	public class CompositeShape : Shape
+	public abstract class CompositeShape : Shape
 	{
 		private List<Shape> shapes;
 

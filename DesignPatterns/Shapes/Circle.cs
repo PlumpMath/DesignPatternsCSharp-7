@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Shapes
 {
-	public class Circle : Shape
+	public abstract class Circle : Shape
 	{
 		public Circle(double x, double y, double radius)
 		{

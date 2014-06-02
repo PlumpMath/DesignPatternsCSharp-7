@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Shapes
 {
-	public class Rectangle : Shape
+	public abstract class Rectangle : Shape
 	{
 		public Rectangle(double x, double y, double width, double height)
 		{

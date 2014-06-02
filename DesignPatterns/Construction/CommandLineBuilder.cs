@@ -10,11 +10,12 @@ namespace DesignPatterns.Construction
 {
 	public class CommandLineBuilder : AbstractBuilder
 	{
-		public override Shape Construct()
+		public override Shape Construct(ShapeFactory shapeFactory)
 		{
 			string line = Console.ReadLine();
 
-			var shape = new CompositeShape();
+			var shape = shapeFactory.CreateComposite();
+
 			while(line != string.Empty)
 			{
 				var parts = line.Split(' ');
@@ -24,7 +25,7 @@ namespace DesignPatterns.Construction
 					var y = double.Parse(parts[2]);
 					var r = double.Parse(parts[3]);
 
-					shape.Add(new Circle(x, y, r));
+					shape.Add(shapeFactory.CreateCircle(x, y, r));
 				}
 				else if (parts[0] == "rectangle")
 				{
@@ -33,11 +34,11 @@ namespace DesignPatterns.Construction
 					var w = double.Parse(parts[3]);
 					var h = double.Parse(parts[4]);
 
-					shape.Add(new Rectangle(x, y, w, h));
+					shape.Add(shapeFactory.CreateRectangle(x, y, w, h));
 				}
 				else if (parts[0] == "complex")
 				{
-					shape.Add(this.Construct());
+					shape.Add(this.Construct(shapeFactory));
 				}
 
 				line = Console.ReadLine();

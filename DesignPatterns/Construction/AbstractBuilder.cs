@@ -9,6 +9,6 @@ namespace DesignPatterns
 {
 	public abstract class AbstractBuilder
 	{
-		public abstract Shape Construct();
+		public abstract Shape Construct(ShapeFactory shapeFactory);
 	}
 }
