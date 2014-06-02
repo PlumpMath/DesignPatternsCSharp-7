@@ -9,5 +9,7 @@ namespace DesignPatterns.Shapes
 	public abstract class Shape
 	{
 		public abstract double CalcArea();
+
+		public abstract void Accept(ShapeVisitor visitor);
 	}
 }

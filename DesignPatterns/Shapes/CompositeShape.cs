@@ -42,5 +42,10 @@ namespace DesignPatterns.Shapes
 		{
 			return this.shapes.Remove(shape);
 		}
+
+		public override void Accept(ShapeVisitor visitor)
+		{
+			visitor.VisitCompositeShape(this);
+		}
 	}
 }

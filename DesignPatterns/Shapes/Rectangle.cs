@@ -28,5 +28,10 @@ namespace DesignPatterns.Shapes
 		{
 			return this.Width * this.Height;
 		}
+
+		public override void Accept(ShapeVisitor visitor)
+		{
+			visitor.VisitRectangle(this);
+		}
 	}
 }

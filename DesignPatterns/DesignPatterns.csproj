@@ -63,6 +63,9 @@
     <Compile Include="Shapes\Rectangle.cs" />
     <Compile Include="Shapes\Shape.cs" />
     <Compile Include="Shapes\ShapeFactory.cs" />
+    <Compile Include="Shapes\ShapeVisitor.cs" />
+    <Compile Include="Visitors\CountingVisitor.cs" />
+    <Compile Include="Visitors\XmlOutVisitor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

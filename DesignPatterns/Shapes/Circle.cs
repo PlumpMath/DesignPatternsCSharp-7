@@ -28,5 +28,10 @@ namespace DesignPatterns.Shapes
 		{
 			return this.Radius * this.Radius * Math.PI;
 		}
+
+		public override void Accept(ShapeVisitor visitor)
+		{
+			visitor.VisitCircle(this);
+		}
 	}
 }
