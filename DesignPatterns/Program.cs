@@ -27,7 +27,7 @@ namespace DesignPatterns
 		static void Main(string[] args)
 		{
 			var program = new Program(
-							new HardCodedBuilder());
+							new CommandLineBuilder());
 
 			program.Run();
 		}
