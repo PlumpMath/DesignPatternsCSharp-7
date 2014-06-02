@@ -12,5 +12,15 @@ namespace DesignPatterns.Shapes.Qt
 			: base(shapes)
 		{
 		}
+
+		public CompositeShapeQt(CompositeShapeQt other)
+			: base(other)
+		{
+		}
+
+		public override Shape Clone()
+		{
+			return new CompositeShapeQt(this);
+		}
 	}
 }

@@ -13,6 +13,16 @@ namespace DesignPatterns.Shapes.Qt
 		{
 		}
 
+		public RectangleQt(RectangleQt other)
+			: base(other)
+		{
+		}
+
+		public override Shape Clone()
+		{
+			return new RectangleQt(this);
+		}
+
 		/*
 		 * Specifics for Qt
 		 */

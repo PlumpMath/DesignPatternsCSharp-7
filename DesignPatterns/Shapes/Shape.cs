@@ -11,5 +11,7 @@ namespace DesignPatterns.Shapes
 		public abstract double CalcArea();
 
 		public abstract void Accept(ShapeVisitor visitor);
+
+		public abstract Shape Clone();
 	}
 }

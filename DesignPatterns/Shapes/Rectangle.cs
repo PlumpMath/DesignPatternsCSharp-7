@@ -16,6 +16,14 @@ namespace DesignPatterns.Shapes
 			this.Height = height;
 		}
 
+		public Rectangle(Rectangle other)
+		{
+			this.X = other.X;
+			this.Y = other.Y;
+			this.Width = other.Width;
+			this.Height = other.Height;
+		}
+
 		public double X { get; set; }
 
 		public double Y { get; set; }

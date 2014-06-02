@@ -13,6 +13,16 @@ namespace DesignPatterns.Shapes.GDI
 		{
 		}
 
+		public CircleGDI(CircleGDI other)
+			: base(other)
+		{
+		}
+
+		public override Shape Clone()
+		{
+			return new CircleGDI(this);
+		}
+
 		/*
 		 * Specific to GDI
 		 */

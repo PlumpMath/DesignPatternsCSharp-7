@@ -13,6 +13,16 @@ namespace DesignPatterns.Shapes.GL
 		{
 		}
 
+		public CircleGL(CircleGL other)
+			: base(other)
+		{
+		}
+
+		public override Shape Clone()
+		{
+			return new CircleGL(this);
+		}
+
 		/*
 		 * Specifics to GL
 		 */

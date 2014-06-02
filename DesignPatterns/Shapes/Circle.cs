@@ -15,6 +15,13 @@ namespace DesignPatterns.Shapes
 			this.Radius = radius;
 		}
 
+		public Circle(Circle other)
+		{
+			this.CenterX = other.CenterX;
+			this.CenterY = other.CenterY;
+			this.Radius = other.Radius;
+		}
+
 		public double CenterX
 		{ get; set; }
 

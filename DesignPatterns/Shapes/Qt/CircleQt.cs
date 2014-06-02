@@ -12,6 +12,17 @@ namespace DesignPatterns.Shapes.Qt
 			: base(x, y, r)
 		{
 		}
+
+		public CircleQt(CircleQt other)
+			: base(other)
+		{
+		}
+
+		public override Shape Clone()
+		{
+			return new CircleQt(this);
+		}
+
 		/*
 		 * Specifics to Qt.
 		 */

@@ -12,5 +12,15 @@ namespace DesignPatterns.Shapes.GL
 			: base(x, y, w, h)
 		{
 		}
+
+		public RectangleGL(RectangleGL other)
+			: base(other)
+		{
+		}
+
+		public override Shape Clone()
+		{
+			return new RectangleGL(this);
+		}
 	}
 }

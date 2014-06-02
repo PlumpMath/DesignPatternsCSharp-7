@@ -12,5 +12,15 @@ namespace DesignPatterns.Shapes.GDI
 			: base(shapes)
 		{
 		}
+
+		public CompositeShapeGDI(CompositeShapeGDI other)
+			: base(other)
+		{
+		}
+
+		public override Shape Clone()
+		{
+			return new CompositeShapeGDI(this);
+		}
 	}
 }

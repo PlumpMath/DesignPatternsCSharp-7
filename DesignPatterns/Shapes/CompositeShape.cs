@@ -15,6 +15,11 @@ namespace DesignPatterns.Shapes
 			this.shapes = new List<Shape>();
 		}
 
+		public CompositeShape(CompositeShape other)
+		{
+			this.shapes = other.Shapes.Select(x => x.Clone()).ToList();
+		}
+
 		public CompositeShape(params Shape[] shapes)
 		{
 			this.shapes = new List<Shape>(shapes);

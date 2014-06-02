@@ -61,6 +61,9 @@ namespace DesignPatterns
 			this.CalculateSurfaceArea(rootShape);
 			this.PrintElementCounts(rootShape);
 			this.WriteAsXml(rootShape);
+
+			var copy = rootShape.Clone();
+			var doubleScene = this.ShapeFactory.CreateComposite(rootShape, copy);
 		}
 
 		public AbstractBuilder Builder { get; set; }
