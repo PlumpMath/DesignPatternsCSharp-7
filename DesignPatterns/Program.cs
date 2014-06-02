@@ -11,12 +11,18 @@ namespace DesignPatterns
 	{
 		static void Main(string[] args)
 		{
-			var shapes = new List<Shape>();
+			var rootShape = new CompositeShape();
 
-			shapes.Add(new Rectangle(10, 30, 5, 4));
-			shapes.Add(new Circle(10, 3, 13));
+			rootShape.Add(new Rectangle(10, 30, 5, 4));
+			rootShape.Add(new Circle(10, 3, 13));
 
-			var totalArea = shapes.Aggregate(0.0, (area, s) => area += s.CalcArea());
+			rootShape.Add(new CompositeShape(
+					new Rectangle(12, 14, 2, 2),
+					new Circle(15, 18, 2)
+				));
+
+			var totalArea = rootShape.CalcArea();
+
 			Console.WriteLine("Total Surface Area:", totalArea);
 		}
 	}
