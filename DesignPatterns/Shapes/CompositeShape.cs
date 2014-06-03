@@ -22,7 +22,7 @@ namespace DesignPatterns.Shapes
 
 		public override double CalcArea()
 		{
-			return this.shapes.Aggregate(0.0, (area, s) => area + s.CalcArea());
+			return this.shapes.Sum(s => s.CalcArea());
 		}
 
 		public IEnumerable<Shape> Shapes
