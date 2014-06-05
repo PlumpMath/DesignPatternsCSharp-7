@@ -23,7 +23,7 @@ namespace DesignPatterns
 
 			var totalArea = rootShape.CalcArea();
 
-			Console.WriteLine("Total Surface Area:", totalArea);
+			Console.WriteLine("Total Surface Area: {0}", totalArea);
 		}
 	}
 }
