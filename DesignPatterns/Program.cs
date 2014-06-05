@@ -17,7 +17,7 @@ namespace DesignPatterns
 			shapes.Add(new Circle(10, 3, 13));
 
 			var totalArea = shapes.Aggregate(0.0, (area, s) => area += s.CalcArea());
-			Console.WriteLine("Total Surface Area:", totalArea);
+			Console.WriteLine("Total Surface Area: {0}", totalArea);
 		}
 	}
 }
